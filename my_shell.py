@@ -1,10 +1,10 @@
 from shop.models import *
 
-items = Item.objects.create(name='Компьютер', price=30000)
-items = Item.objects.create(name='Наушники', price=10000)
-items = Item.objects.create(name='Мышь', price=3500)
-items = Item.objects.create(name='Камера', price=5000)
-items = Item.objects.create(name='Клавиатура', price=5000)
+items1 = Item.objects.create(name='Компьютер', price=30000)
+items2 = Item.objects.create(name='Наушники', price=10000)
+items3 = Item.objects.create(name='Мышь', price=3500)
+items4 = Item.objects.create(name='Камера', price=5000)
+items5 = Item.objects.create(name='Клавиатура', price=5000)
 
 item2 = Item.objects.get(id=2)
 purchase2 = Purchase.objects.create(name='Темиров Азамат', age=18, item=item2)
