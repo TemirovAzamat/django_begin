@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Товар</th>
+      <th scope="col">Цена</th>
+      <th scope="col">Покупатели</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ items.id }}</th>
+      <td>{{ items.name }}</td>
+      <td>{{ items.price }}</td>
+      <td scope="row">
+        {% for purchase in items.purchases.all %}
+          {{ purchase.name }} <br>
+        {% endfor %}
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock content %}
+
