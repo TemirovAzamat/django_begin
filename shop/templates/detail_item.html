@@ -15,7 +15,7 @@
       <th scope="row">{{ items.id }}</th>
       <td>{{ items.name }}</td>
       <td>{{ items.price }}</td>
-      <td scope="row">
+      <td>
         {% for purchase in items.purchases.all %}
           {{ purchase.name }} <br>
         {% endfor %}
